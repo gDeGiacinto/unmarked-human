@@ -22,21 +22,17 @@
   </div>
 </nav>
 
-<header class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow">{{heroEyebrow}}</p>
-      <h1>{{heroHeadline}}</h1>
-      <p>{{heroBody}}</p>
-      <div class="hero-stats">
-        {{heroStats}}
-      </div>
-      <div class="hero-tags">
-        {{heroTags}}
-      </div>
+<header class="hero" id="top" style="background-image:url('{{heroImage}}');">
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-copy">
+    <p class="eyebrow">{{heroEyebrow}}</p>
+    <h1>{{heroHeadline}}</h1>
+    <p>{{heroBody}}</p>
+    <div class="hero-stats">
+      {{heroStats}}
     </div>
-    <div class="hero-visual">
-      <img src="{{heroImage}}" alt="BPM-THERAPY studio" onerror="this.parentElement.style.display='none'">
+    <div class="hero-tags">
+      {{heroTags}}
     </div>
   </div>
 </header>

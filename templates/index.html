@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{siteTitle}}</title>
+<meta name="description" content="{{description}}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="#top" class="brand">{{brandName}}</a>
+    <ul class="nav-links">
+      {{navLinks}}
+    </ul>
+    <a href="{{navCtaTarget}}" class="nav-cta">{{navCtaLabel}}</a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{{heroEyebrow}}</p>
+      <h1>{{heroHeadline}}</h1>
+      <p>{{heroBody}}</p>
+      <div class="hero-stats">
+        {{heroStats}}
+      </div>
+      <div class="hero-tags">
+        {{heroTags}}
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="{{heroImage}}" alt="BPM-THERAPY studio" onerror="this.parentElement.style.display='none'">
+    </div>
+  </div>
+</header>
+
+<div class="marquee">
+  <div class="marquee-track">
+    {{marquee}}
+  </div>
+</div>
+
+<section id="stream">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">{{streamEyebrow}}</p>
+        <h2>{{streamHeading}}</h2>
+      </div>
+      <p>{{streamBody}}</p>
+    </div>
+    <div class="stream-layout">
+      <ul class="schedule-list">
+        {{scheduleList}}
+      </ul>
+      <div>
+        <div class="countdown-box">
+          <div class="countdown-label">Next stream starts in</div>
+          <div class="countdown" id="countdown">
+            <div><div class="num" id="cd-days">00</div><div class="unit">Days</div></div>
+            <div><div class="num" id="cd-hours">00</div><div class="unit">Hrs</div></div>
+            <div><div class="num" id="cd-mins">00</div><div class="unit">Min</div></div>
+            <div><div class="num" id="cd-secs">00</div><div class="unit">Sec</div></div>
+          </div>
+        </div>
+        {{streamEmbed}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="music">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">{{musicEyebrow}}</p>
+        <h2>{{musicHeading}}</h2>
+      </div>
+      <p>{{musicBody}}</p>
+    </div>
+    <div class="embeds-row">
+      {{featuredEmbed}}
+      {{latestEmbed}}
+    </div>
+    <ul class="track-list">
+      {{trackList}}
+    </ul>
+  </div>
+</section>
+
+<section id="video">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">{{videoEyebrow}}</p>
+        <h2>{{videoHeading}}</h2>
+      </div>
+      <p>{{videoBody}}</p>
+    </div>
+    <div class="video-grid">
+      {{videoGrid}}
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-layout">
+    <div class="about-visual">
+      <img src="{{aboutImage}}" alt="Studio gear" onerror="this.parentElement.style.display='none'">
+    </div>
+    <div>
+      <p class="eyebrow">{{aboutEyebrow}}</p>
+      <h2>{{aboutHeading}}</h2>
+      {{aboutParagraphs}}
+      <div class="gear-tags">
+        {{gearTags}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-layout">
+    <div>
+      <p class="eyebrow">{{contactEyebrow}}</p>
+      <h2>{{contactHeading}}</h2>
+      <p>{{contactBody}}</p>
+      <form id="inquiry-form">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="type">Inquiry type</label>
+          <select id="type" name="type">
+            {{inquiryOptions}}
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button class="btn" type="submit">Send Inquiry</button>
+        <p class="form-note">{{formNote}}</p>
+        <div class="confirm" id="confirm">{{confirmationText}}</div>
+      </form>
+    </div>
+    <dl class="contact-side">
+      <dt>Direct</dt>
+      <dd><a href="mailto:{{directEmail}}">{{directEmail}}</a></dd>
+      <dt>Based in</dt>
+      <dd>{{basedIn}}</dd>
+      <dt>Follow</dt>
+      <dd class="social-row">
+        {{socialRow}}
+      </dd>
+    </dl>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <span class="brand">{{footerBrand}}</span>
+    <p>{{footerCopyright}}</p>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

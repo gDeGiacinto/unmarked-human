@@ -1,0 +1,156 @@
+backend:
+  name: github
+  repo: gDeGiacinto/unmarked-human
+  branch: main
+  base_url: https://api.decapbridge.com
+  auth_endpoint: auth
+
+# Netlify Identity + Git Gateway (the old default here) is deprecated, so
+# this uses DecapBridge instead — a free hosted login for Decap CMS that
+# talks to GitHub on your behalf. Sign up at decapbridge.com, link this
+# repo, and it will hand you the exact `repo:` value to paste in above.
+#
+# After every save, your host rebuilds the site automatically (build
+# command runs `node build.js`), so published edits go live within a
+# minute or two.
+publish_mode: simple
+media_folder: "assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - name: "site"
+        label: "BPM-THERAPY Site"
+        file: "content/site.json"
+        fields:
+          - label: "Meta / SEO"
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: "Site Title", name: "siteTitle", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Meta Description", name: "description", widget: "text" }
+              - { label: "Brand Name", name: "brandName", widget: "string" }
+
+          - label: "Navigation"
+            name: "nav"
+            widget: "object"
+            fields:
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Target (anchor)", name: "target", widget: "string" }
+              - { label: "Book Button Label", name: "ctaLabel", widget: "string" }
+              - { label: "Book Button Target", name: "ctaTarget", widget: "string" }
+
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Hero Image", name: "heroImage", widget: "image" }
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+              - { label: "Tags", name: "tags", widget: "list" }
+
+          - label: "Live Stream Section"
+            name: "stream"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Live Embed URL (YouTube/Twitch)", name: "embedUrl", widget: "string", required: false }
+              - { label: "Embed Placeholder Note", name: "embedNote", widget: "string" }
+              - label: "Weekly Schedule"
+                name: "schedule"
+                widget: "list"
+                fields:
+                  - { label: "Day", name: "day", widget: "string" }
+                  - { label: "Time", name: "time", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Status", name: "status", widget: "string" }
+
+          - label: "Music & Mixes Section"
+            name: "music"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Featured Embed URL (SoundCloud/Mixcloud)", name: "featuredEmbedUrl", widget: "string", required: false }
+              - { label: "Featured Embed Note", name: "featuredEmbedNote", widget: "string" }
+              - { label: "Latest Embed URL", name: "latestEmbedUrl", widget: "string", required: false }
+              - { label: "Latest Embed Note", name: "latestEmbedNote", widget: "string" }
+              - label: "Tracks"
+                name: "tracks"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Type", name: "type", widget: "string" }
+                  - { label: "BPM", name: "bpm", widget: "string" }
+                  - { label: "Key", name: "key", widget: "string" }
+
+          - label: "Video Section"
+            name: "video"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - label: "Videos"
+                name: "videos"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "YouTube URL", name: "url", widget: "string", required: false }
+                  - { label: "Placeholder Note", name: "note", widget: "string" }
+
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Body Paragraphs"
+                name: "bodyParagraphs"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Gear Tags", name: "gearTags", widget: "list" }
+
+          - label: "Contact & Booking Section"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Inquiry Types", name: "inquiryTypes", widget: "list" }
+              - { label: "Form Note", name: "formNote", widget: "string" }
+              - { label: "Confirmation Text", name: "confirmationText", widget: "string" }
+              - { label: "Direct Email", name: "directEmail", widget: "string" }
+              - { label: "Based In", name: "basedIn", widget: "string" }
+              - label: "Socials"
+                name: "socials"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Brand Name", name: "brandName", widget: "string" }
+              - { label: "Copyright Text", name: "copyright", widget: "string" }

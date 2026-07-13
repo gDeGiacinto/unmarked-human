@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "siteTitle": "BPM-THERAPY — Guy DeGiacinto",
+    "tagline": "Techno, Tribal & Latin Electronic",
+    "description": "BPM-THERAPY is the electronic music project of Guy DeGiacinto — techno, tribal and Latin rhythms engineered on drum machines, mixed live, and broadcast straight from the studio.",
+    "brandName": "BPM-THERAPY"
+  },
+  "nav": {
+    "links": [
+      { "label": "Stream", "target": "#stream" },
+      { "label": "Music", "target": "#music" },
+      { "label": "Video", "target": "#video" },
+      { "label": "About", "target": "#about" },
+      { "label": "Book", "target": "#contact" }
+    ],
+    "ctaLabel": "Book Now",
+    "ctaTarget": "#contact"
+  },
+  "hero": {
+    "eyebrow": "Producer · DJ · Live Streamer",
+    "headline": "Sound as ritual. Frequency as therapy.",
+    "body": "BPM-THERAPY is the electronic music project of Guy DeGiacinto — techno, tribal and Latin rhythms engineered on drum machines, mixed live, and broadcast straight from the studio.",
+    "heroImage": "/assets/img/hero.svg",
+    "stats": [
+      { "label": "Genres", "value": "Techno, Tribal, Latin" },
+      { "label": "Rig", "value": "Ableton 12 · TR-8S · Push 3" },
+      { "label": "Streams", "value": "4x / week live sets" }
+    ],
+    "tags": ["Techno", "Tribal", "Latin Electronic", "Live Sets", "Original Productions", "TR-8S"]
+  },
+  "stream": {
+    "eyebrow": "Live Stream Schedule",
+    "heading": "Tune in four nights a week.",
+    "body": "Real-time sets broadcast from the studio. Add the calendar, hit the reminder, and come build the loop with the chat.",
+    "embedUrl": "",
+    "embedNote": "Add a YouTube/Twitch live embed URL in the admin",
+    "schedule": [
+      { "day": "Mon", "time": "8:00 PM", "title": "Techno Session — deep & driving", "status": "Scheduled" },
+      { "day": "Tue", "time": "8:00 PM", "title": "Tribal / Ecstatic", "status": "Scheduled" },
+      { "day": "Thu", "time": "8:00 PM", "title": "Production Lab — building tracks", "status": "Scheduled" },
+      { "day": "Fri", "time": "9:00 PM", "title": "Weekend Warm-up DJ set", "status": "Scheduled" }
+    ]
+  },
+  "music": {
+    "eyebrow": "Music & Mixes",
+    "heading": "Recent recordings.",
+    "body": "Studio mixes, live captures and original productions. Stream below or jump to your platform of choice.",
+    "featuredEmbedUrl": "",
+    "featuredEmbedNote": "Add a SoundCloud/Mixcloud player URL in the admin",
+    "latestEmbedUrl": "",
+    "latestEmbedNote": "Add an embed URL in the admin",
+    "tracks": [
+      { "title": "Untitled Techno Sketch", "type": "Original", "bpm": "132 BPM", "key": "A min" },
+      { "title": "Tribal Ritual — Live Capture", "type": "Live set", "bpm": "126 BPM", "key": "Camelot 8A" },
+      { "title": "Latin Heat (Workout)", "type": "Mix", "bpm": "128 BPM", "key": "9B" },
+      { "title": "Deep Drive — Studio Jam", "type": "TR-8S", "bpm": "134 BPM", "key": "5A" }
+    ]
+  },
+  "video": {
+    "eyebrow": "Video & YouTube",
+    "heading": "Watch the sets.",
+    "body": "Live captures, production walkthroughs and gear deep-dives from the Unmarked channel.",
+    "videos": [
+      { "label": "Featured video", "url": "", "note": "Add a YouTube URL in the admin" },
+      { "label": "Latest upload", "url": "", "note": "Add a YouTube URL in the admin" },
+      { "label": "Production walkthrough", "url": "", "note": "Add a YouTube URL in the admin" }
+    ]
+  },
+  "about": {
+    "eyebrow": "About",
+    "heading": "A gear-obsessed producer treating rhythm as medicine.",
+    "bodyParagraphs": [
+      "Guy DeGiacinto is a producer, DJ and live streamer working at the intersection of techno, tribal and Latin electronic music. After years touring and performing live sets, he now builds tracks from the ground up — treating the TR-8S as a production instrument, not just a jam machine.",
+      "Operating under the BPM-THERAPY and Unmarked banners, he streams four nights a week from a Mac Studio-driven rig, sharing the entire process: MIDI routing, FX racks, harmonic mixing on the Camelot wheel, and the occasional glorious failure."
+    ],
+    "image": "/assets/img/studio.svg",
+    "gearTags": ["Techno", "Tribal", "Latin", "Ableton 12", "TR-8S", "Push 3", "Rekordbox", "Camelot Mixing"]
+  },
+  "contact": {
+    "eyebrow": "Contact & Booking",
+    "heading": "Let's build something.",
+    "body": "Bookings, collaborations, lessons or gear questions — drop a line below.",
+    "inquiryTypes": ["Booking / gig", "Collaboration", "Lessons / mentoring", "Press / interview", "Other"],
+    "formNote": "Connect a form provider (e.g. Formspree, Netlify Forms) or set the form action to route inquiries to your email.",
+    "confirmationText": "Thanks — your inquiry is queued. Guy will reply within 48 hours.",
+    "directEmail": "hello@bpm-therapy.com",
+    "basedIn": "Miami, FL — streaming worldwide",
+    "socials": [
+      { "label": "YouTube", "url": "https://youtube.com" },
+      { "label": "SoundCloud", "url": "https://soundcloud.com" },
+      { "label": "Instagram", "url": "https://instagram.com" },
+      { "label": "Beatport", "url": "https://beatport.com" }
+    ]
+  },
+  "footer": {
+    "brandName": "BPM-THERAPY",
+    "copyright": "© 2026 BPM-THERAPY · Guy DeGiacinto · All rights reserved"
+  }
+}

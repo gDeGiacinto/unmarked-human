@@ -12,6 +12,13 @@ const path = require("path");
 const ROOT = __dirname;
 const content = JSON.parse(fs.readFileSync(path.join(ROOT, "content/site.json"), "utf8"));
 
+// Turns **word** into <span class="accent">word</span> — lets the CMS mark
+// up which words in the headline get the accent color, without needing a
+// separate rich-text editor.
+function accentize(str) {
+  return str.replace(/\*\*(.+?)\*\*/g, '<span class="accent">$1</span>');
+}
+
 function esc(str) {
   if (str === undefined || str === null) return "";
   return String(str)
@@ -46,7 +53,7 @@ function navLinks() {
 function heroStats() {
   return content.hero.stats
     .map(
-      (s) => `<div><div class="stat-label">${esc(s.label)}</div><div class="stat-value">${esc(s.value)}</div></div>`
+      (s) => `<div><div class="stat-value">${esc(s.value)}</div><div class="stat-label">${esc(s.label)}</div></div>`
     )
     .join("\n");
 }
@@ -56,7 +63,7 @@ function heroTags() {
 }
 
 function marquee() {
-  const items = content.hero.tags.map((t) => `<span><em>&#9679;</em> ${esc(t)}</span>`).join("\n");
+  const items = content.hero.tags.map((t) => `<span>${esc(t)} <em>&#10022;</em></span>`).join("\n");
   return items + items; // duplicate for seamless scroll
 }
 
@@ -131,7 +138,7 @@ const html = template
   .replace(/{{navCtaLabel}}/g, esc(content.nav.ctaLabel))
   .replace(/{{navCtaTarget}}/g, esc(content.nav.ctaTarget))
   .replace(/{{heroEyebrow}}/g, esc(content.hero.eyebrow))
-  .replace(/{{heroHeadline}}/g, esc(content.hero.headline))
+  .replace(/{{heroHeadline}}/g, accentize(esc(content.hero.headline)))
   .replace(/{{heroBody}}/g, esc(content.hero.body))
   .replace(/{{heroImage}}/g, esc(content.hero.heroImage))
   .replace(/{{heroStats}}/g, heroStats())

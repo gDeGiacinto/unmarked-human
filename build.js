@@ -193,4 +193,10 @@ function copyDir(src, dest) {
 copyDir(path.join(ROOT, "assets"), path.join(ROOT, "dist/assets"));
 copyDir(path.join(ROOT, "admin"), path.join(ROOT, "dist/admin"));
 
+// Sevalla reads _headers from the publish directory (dist), not the repo root.
+const headersSrc = path.join(ROOT, "_headers");
+if (fs.existsSync(headersSrc)) {
+  fs.copyFileSync(headersSrc, path.join(ROOT, "dist/_headers"));
+}
+
 console.log("Built dist/index.html");

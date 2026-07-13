@@ -1,0 +1,18 @@
+# Never cache the HTML — always fetch the latest build so edits (from the
+# admin or from code pushes) show up immediately instead of serving a stale
+# snapshot from Sevalla's CDN.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/admin/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Long-cache fingerprint-free static assets is normally risky (they could go
+# stale under the same filename), so keep these short instead of the usual
+# "immutable, 1 year" pattern — still fast, but safe if an image or script
+# changes without renaming.
+/assets/*
+  Cache-Control: public, max-age=600, must-revalidate

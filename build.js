@@ -70,12 +70,12 @@ function marquee() {
 function scheduleList() {
   return content.stream.schedule
     .map(
-      (s) => `<li>
-        <span class="schedule-day">${esc(s.day)}</span>
-        <span class="schedule-title">${esc(s.title)}</span>
-        <span class="schedule-time">${esc(s.time)}</span>
-        <span class="schedule-status">${esc(s.status)}</span>
-      </li>`
+      (s) => `<div class="stream-card" data-day="${esc(s.day)}">
+        <div class="day">${esc(s.day)}</div>
+        <div class="time">${esc(s.time)}</div>
+        <div class="label">${esc(s.title)}</div>
+        <div class="live"><span class="live-dot"></span>${esc(s.status)}</div>
+      </div>`
     )
     .join("\n");
 }
